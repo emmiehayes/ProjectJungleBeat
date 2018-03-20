@@ -1,14 +1,9 @@
 class LinkedList
-  attr_reader :list
 
-  def initialize(data)
-    @list = data
+attr_reader :head
+
+  def initialize
+    @head = nil
   end
 
 end
-
-
-
-
-
-list = LinkedList.new(nil)

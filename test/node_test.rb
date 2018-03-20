@@ -6,16 +6,28 @@ require 'pry'
 
 class NodeTest < MiniTest::Test
 
-  def setup
-    @jungle_beat = Node.new("plop")
+  def test_node_exists
+    node = Node.new("plop")
+    assert_instance_of Node, node
   end
 
-  def test_node_exists
-    assert_instance_of Node, @jungle_beat
+  def test_node_holds_nil
+    node = Node.new(nil)
+    assert_equal nil, node.data
+  end
+
+  def test_node_holds_other_data
+    node = Node.new("lalala")
+    assert_equal "lalala", node.data
   end
 
   def test_next_node
-    assert_equal nil, @jungle_beat.next_node
+    node = Node.new(nil)
+    assert_equal nil, node.next_node
   end
 
+  def text_next_node_other_data
+    node = Node.new("lalala")
+    assert_equal "lalala", node.next_node
+  end
 end

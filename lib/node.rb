@@ -1,18 +1,12 @@
 class Node
-  attr_reader :beat
+
+  attr_reader :data
 
   def initialize(data)
-    @beat = data
+    @data = data
   end
 
   def next_node
     nil
   end
-
 end
-
-
-
-
-
-node = Node.new("plop")
