@@ -33,4 +33,6 @@ class LinkedListTest < MiniTest::Test
     list.append("doop")
     assert_equal nil, list.head.next_node
   end
+
+
 end

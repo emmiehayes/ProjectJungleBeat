@@ -8,31 +8,28 @@ attr_reader :head, :count
   end
 
   def append(noise)
-       @count += 1
+    @count += 1
+    current = @head
     if @head == nil
        @head = Node.new(noise)
     else
-       @head.next_node = Node.new(noise)
-    end
-    noise
+      until current.next_node == nil
+       current = current.next_node
+       current.next_node = Node.new(noise)
+      end
+  end
+  noise
+end
+  def to_string
   end
 
-  def head_to_next_node
-    if @head.next_node == nil
-       @head.next_node = Node.new(noise)
-    else
-       @head.next_node.next_node = Node.new(noise)
-    end
-    noise
-  end
+
 
 end
 
 
+
 ## ITERATION 1
-
-
-
 ## > list.to_string
 ## => "doop"
 
