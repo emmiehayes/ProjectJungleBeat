@@ -7,7 +7,7 @@ require 'pry'
 class NodeTest < MiniTest::Test
 
   def setup
-    @node = Node.new("sound")
+    @node = Node.new("doop")
   end
 
   def test_node_exists
@@ -15,7 +15,7 @@ class NodeTest < MiniTest::Test
   end
 
   def test_node_holds_data
-    assert_equal "sound", @node.data
+    assert_equal "doop", @node.data
   end
 
   def test_next_node
