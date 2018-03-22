@@ -1,7 +1,7 @@
 
 class LinkedList
 
-attr_reader :head
+attr_accessor :head
 
   def initialize(head = nil)
     @head = head
@@ -21,10 +21,10 @@ attr_reader :head
   end
 
   def count
-    current = @head
     if @head.nil?
       return count = 0
     else
+      current = @head
       until current.next_node == nil
         current = current.next_node
         current.next_node = Node.new(data)

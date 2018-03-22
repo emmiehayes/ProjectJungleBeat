@@ -30,6 +30,7 @@ class LinkedListTest < MiniTest::Test
 
   def test_append_more_data
     list = LinkedList.new
+    list.append("doop")
     assert_equal "deep", list.append("deep")
   end
 
@@ -41,11 +42,10 @@ class LinkedListTest < MiniTest::Test
   def test_count_when_count_one
     list = LinkedList.new
     list.append("doop")
-    assert_equal 1, list.count
+    assert_equal 1, list.count("doop")
   end
 
   def test_count_when_count_one
-    skip
     list = LinkedList.new
     list.append("doop")
     list.append("deep")
