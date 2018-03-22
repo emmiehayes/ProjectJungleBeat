@@ -25,11 +25,12 @@ attr_accessor :head
       return count = 0
     else
       current = @head
+      count = 1
       until current.next_node == nil
-        current = current.next_node
-        current.next_node = Node.new(data)
         count += 1
+        current = current.next_node
       end
     end
+    count
   end
 end
